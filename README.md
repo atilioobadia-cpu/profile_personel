@@ -64,7 +64,7 @@ client portals and integration projects.
 A single self-contained `index.html` — no frameworks, no build step.
 
 - Receipt/ledger design language: bold uppercase monospace headers, thin rules, `LABEL |` value rows
-- Typography: Space Mono (display) + IBM Plex Sans (body) + IBM Plex Mono (labels)
+- Typography: Nunito across the entire site — bold uppercase headings, clean readable body
 - Client verifications: stamped testimonial cards cross-referenced to case-study records (`REC-01…04`)
 - Quantified outcomes on every case study, plus evidence slots ready for screenshots (`assets/work/rec-*.png`)
 - Transparent engagement models — advisory day-rate, fixed-scope milestones, managed retainer — entered via a free 30-minute discovery call
