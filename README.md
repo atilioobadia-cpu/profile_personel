@@ -1,8 +1,8 @@
 <div align="center">
-  <img src="assets/banner.svg" alt="ATILIO OBADIA / ERPCODEC — Systems that keep businesses running. ERPNext and Frappe specialist based in Mwanza, Tanzania." width="100%">
+  <img src="assets/banner.svg" alt="ATILIO OBADIA / ERPCODEC — Systems that keep businesses running. Open Source Systems Developer based in East Africa Community — Tanzania." width="100%">
 
   **African Unified Reasoning Assistant | AURA**
-  ERPNext / Frappe Specialist — Mwanza, Tanzania · Working across East Africa
+  Open Source Systems Developer — East Africa Community (EAC) · Tanzania
 
   ![ERPNext](https://img.shields.io/badge/ERPNext-1f5c6b?style=flat-square&logoColor=white)
   ![Frappe Framework](https://img.shields.io/badge/Frappe_Framework-1f5c6b?style=flat-square)
