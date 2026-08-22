@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Atilio / ERPcodec — Systems that keep businesses running. ERPNext and Frappe specialist based in Mwanza, Tanzania.">
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-label="Atilio Obadia / ERPcodec â€” Systems that keep businesses running. ERPNext and Frappe specialist based in Mwanza, Tanzania.">
   <defs>
     <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
       <path d="M44 0H0v44" fill="none" stroke="#f1efe9" stroke-opacity="0.05"/>
@@ -17,18 +17,18 @@
   <rect x="22" y="22" width="1156" height="276" fill="none" stroke="#f1efe9" stroke-opacity="0.22"/>
 
   <circle cx="62" cy="66" r="5" fill="#3fae6a"/>
-  <text x="76" y="71" font-family="'Courier New',monospace" font-size="13" letter-spacing="2" fill="#f1efe9" fill-opacity="0.65">SYSTEM STATUS | OPERATIONAL — ACCEPTING PROJECTS</text>
+  <text x="76" y="71" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" letter-spacing="2" fill="#f1efe9" fill-opacity="0.65">SYSTEM STATUS | OPERATIONAL â€” ACCEPTING PROJECTS</text>
 
   <line x1="56" y1="92" x2="1144" y2="92" stroke="#c98a2c" stroke-width="2"/>
   <line x1="56" y1="96" x2="1144" y2="96" stroke="#f1efe9" stroke-opacity="0.35"/>
 
-  <text x="54" y="168" font-family="'Courier New',monospace" font-weight="700" font-size="66" letter-spacing="3" fill="#f1efe9">ATILIO<tspan fill="#c98a2c"> / </tspan>ERPCODEC</text>
-  <text x="57" y="212" font-family="'Courier New',monospace" font-weight="700" font-size="22" letter-spacing="6" fill="#7cc3d4">SYSTEMS THAT KEEP BUSINESSES RUNNING.</text>
+  <text x="54" y="168" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif" font-weight="800" font-size="54" letter-spacing="2" fill="#f1efe9">ATILIO OBADIA<tspan fill="#c98a2c"> / </tspan>ERPCODEC</text>
+  <text x="57" y="212" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="22" letter-spacing="6" fill="#7cc3d4">SYSTEMS THAT KEEP BUSINESSES RUNNING.</text>
 
-  <text x="57" y="252" font-family="'Courier New',monospace" font-size="13" letter-spacing="3" fill="#f1efe9" fill-opacity="0.55">ERPNEXT · FRAPPE FRAMEWORK · CUSTOM SYSTEMS · NETWORKING · BIOMETRIC · INTEGRATIONS</text>
+  <text x="57" y="252" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="13" letter-spacing="3" fill="#f1efe9" fill-opacity="0.55">ERPNEXT Â· FRAPPE FRAMEWORK Â· CUSTOM SYSTEMS Â· NETWORKING Â· BIOMETRIC Â· INTEGRATIONS</text>
 
-  <text x="57" y="284" font-family="'Courier New',monospace" font-size="12" letter-spacing="2" fill="#f1efe9" fill-opacity="0.45">AFRICAN UNIFIED REASONING ASSISTANT | AURA — MWANZA · EAC · TANZANIA</text>
+  <text x="57" y="284" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="12" letter-spacing="2" fill="#f1efe9" fill-opacity="0.45">AFRICAN UNIFIED REASONING ASSISTANT | AURA â€” MWANZA Â· EAC Â· TANZANIA</text>
 
-  <text x="1143" y="240" text-anchor="end" font-family="'Courier New',monospace" font-size="11" letter-spacing="2" fill="#c98a2c">DOC NO | ERC-PRT-2026-001</text>
+  <text x="1143" y="240" text-anchor="end" font-family="'Inter','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="11" letter-spacing="2" fill="#c98a2c">DOC NO | ERC-PRT-2026-001</text>
   <rect x="883" y="250" width="260" height="34" fill="url(#bars)"/>
 </svg>

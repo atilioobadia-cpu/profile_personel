@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/banner.svg" alt="ATILIO / ERPCODEC — Systems that keep businesses running. ERPNext and Frappe specialist based in Mwanza, Tanzania." width="100%">
+  <img src="assets/banner.svg" alt="ATILIO OBADIA / ERPCODEC — Systems that keep businesses running. ERPNext and Frappe specialist based in Mwanza, Tanzania." width="100%">
 
   **African Unified Reasoning Assistant | AURA**
   ERPNext / Frappe Specialist — Mwanza, Tanzania · Working across East Africa
@@ -63,7 +63,8 @@ client portals and integration projects.
 
 A single self-contained `index.html` — no frameworks, no build step.
 
-- Receipt/ledger design language: bold uppercase monospace headers, thin rules, `LABEL |` value rows
+- Receipt/ledger design language: bold uppercase headers, thin rules, `LABEL |` value rows
+- Typography mirrors Frappe's **Espresso** design system — Inter (InterVariable) using the exact `--font-stack` from `frappe/frappe`, with IBM Plex Mono for printed-receipt labels
 - Dark ink hero and footer on warm paper content sections, teal + amber accents
 - Vanilla JS only: typewriter intro, IntersectionObserver reveals, custom cursor, card tilt/spotlight, scroll progress, section-spy nav
 - Responsive, keyboard-accessible, respects `prefers-reduced-motion`
