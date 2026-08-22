@@ -1,14 +1,18 @@
-# ATILIO <span>/</span> ERPCODEC
+<div align="center">
+  <img src="assets/banner.svg" alt="ATILIO / ERPCODEC — Systems that keep businesses running. ERPNext and Frappe specialist based in Mwanza, Tanzania." width="100%">
 
-> **African Unified Reasoning Assistant | AURA**
-> ERPNext / Frappe Specialist — Mwanza, Tanzania · Working across East Africa
+  **African Unified Reasoning Assistant | AURA**
+  ERPNext / Frappe Specialist — Mwanza, Tanzania · Working across East Africa
 
-![ERPNext](https://img.shields.io/badge/ERPNext-1f5c6b?style=flat-square&logoColor=white)
-![Frappe Framework](https://img.shields.io/badge/Frappe_Framework-1f5c6b?style=flat-square)
-![Custom Systems](https://img.shields.io/badge/Custom_Systems-c98a2c?style=flat-square)
-![Networking](https://img.shields.io/badge/Networking-1f5c6b?style=flat-square)
-![Biometric Integration](https://img.shields.io/badge/Biometric_Integration-1f5c6b?style=flat-square)
-![REST APIs](https://img.shields.io/badge/REST_APIs-c98a2c?style=flat-square)
+  ![ERPNext](https://img.shields.io/badge/ERPNext-1f5c6b?style=flat-square&logoColor=white)
+  ![Frappe Framework](https://img.shields.io/badge/Frappe_Framework-1f5c6b?style=flat-square)
+  ![Custom Systems](https://img.shields.io/badge/Custom_Systems-c98a2c?style=flat-square)
+  ![Networking](https://img.shields.io/badge/Networking-1f5c6b?style=flat-square)
+  ![Biometric Integration](https://img.shields.io/badge/Biometric_Integration-1f5c6b?style=flat-square)
+  ![REST APIs](https://img.shields.io/badge/REST_APIs-c98a2c?style=flat-square)
+
+  [Portfolio](https://atilioobadia-cpu.github.io/profile_personel/) · [Case Studies](#case-studies) · [Services](#services) · [Contact](#contact)
+</div>
 
 ---
 
