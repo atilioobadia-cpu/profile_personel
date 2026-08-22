@@ -63,8 +63,8 @@ client portals and integration projects.
 
 A single self-contained `index.html` — no frameworks, no build step.
 
-- Receipt/ledger design language: bold uppercase headers, thin rules, `LABEL |` value rows
-- Typography mirrors Frappe's **Espresso** design system — Inter (InterVariable) using the exact `--font-stack` from `frappe/frappe`, with IBM Plex Mono for printed-receipt labels
+- Receipt/ledger design language: bold uppercase monospace headers, thin rules, `LABEL |` value rows
+- Typography: Space Mono (display) + IBM Plex Sans (body) + IBM Plex Mono (labels)
 - Dark ink hero and footer on warm paper content sections, teal + amber accents
 - Vanilla JS only: typewriter intro, IntersectionObserver reveals, custom cursor, card tilt/spotlight, scroll progress, section-spy nav
 - Responsive, keyboard-accessible, respects `prefers-reduced-motion`
