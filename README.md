@@ -65,6 +65,9 @@ A single self-contained `index.html` — no frameworks, no build step.
 
 - Receipt/ledger design language: bold uppercase monospace headers, thin rules, `LABEL |` value rows
 - Typography: Space Mono (display) + IBM Plex Sans (body) + IBM Plex Mono (labels)
+- Client verifications: stamped testimonial cards cross-referenced to case-study records (`REC-01…04`)
+- Quantified outcomes on every case study, plus evidence slots ready for screenshots (`assets/work/rec-*.png`)
+- Transparent engagement models — advisory day-rate, fixed-scope milestones, managed retainer — entered via a free 30-minute discovery call
 - Dark ink hero and footer on warm paper content sections, teal + amber accents
 - Vanilla JS only: typewriter intro, IntersectionObserver reveals, custom cursor, card tilt/spotlight, scroll progress, section-spy nav
 - Responsive, keyboard-accessible, respects `prefers-reduced-motion`

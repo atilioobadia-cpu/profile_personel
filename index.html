@@ -305,6 +305,34 @@ body.cursor-on .cursor-dot,body.cursor-on .cursor-ring{display:block}
 #toTop:hover{background:var(--teal);border-color:var(--teal)}
 #toTop .ic{width:17px;height:17px}
 
+.sec-sub{margin-top:.55rem;font-family:var(--sans);font-size:.95rem;line-height:1.55;color:var(--txt-mut);max-width:54ch}
+.footer .sec-sub{color:var(--txt-inv-mut)}
+
+.tst-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media(max-width:980px){.tst-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.tst-grid{grid-template-columns:1fr}}
+.tst-card{position:relative;background:var(--paper-soft);border:1px solid #cfcabb;border-radius:4px;padding:1.7rem 1.5rem 1.4rem;display:flex;flex-direction:column;gap:1rem}
+.tst-mark{font-family:var(--mono-head);font-size:2.3rem;line-height:.6;color:var(--amber);display:block}
+.tst-quote{font-size:.97rem;line-height:1.62;color:var(--txt)}
+.tst-src{margin-top:auto;border-top:1px dashed var(--line);padding-top:.95rem}
+.tst-name{font-weight:600;font-size:.92rem}
+.tst-role{font-family:var(--mono);font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--txt-mut);margin-top:.28rem}
+.tst-ver{display:inline-flex;align-items:center;gap:.42rem;font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--green);margin-top:.65rem}
+.tst-ver i{width:6px;height:6px;border-radius:50%;background:var(--green);animation:pulse 2.2s infinite}
+.stamp{position:absolute;top:1.15rem;right:1.15rem;font-family:var(--mono);font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--amber-deep);border:1.5px solid var(--amber);border-radius:2px;padding:.24rem .55rem;transform:rotate(4deg);background:rgba(201,138,44,.07)}
+
+.rec-media{margin:1.4rem 0 0}
+.rec-shot{aspect-ratio:16/7;border:1.5px dashed #b9b4a2;border-radius:4px;background:repeating-linear-gradient(45deg,rgba(31,92,107,.04) 0 12px,transparent 12px 24px),var(--paper);display:flex;align-items:center;justify-content:center;text-align:center;padding:1rem}
+.rec-shot span{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--txt-mut)}
+.rec-media figcaption{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem;margin-top:.55rem;font-family:var(--mono);font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;color:var(--txt-mut)}
+.mini-link{font-family:var(--mono);font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(31,92,107,.4)}
+.mini-link:hover{color:var(--amber-deep);border-bottom-color:var(--amber)}
+
+.plan-price{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;color:var(--amber-deep);text-transform:uppercase;margin-top:-.4rem}
+.engage-strip{margin-top:1.4rem;border:1px dashed #cfcabb;border-radius:4px;background:var(--paper-soft);padding:1.6rem;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.4rem}
+.es-title{font-family:var(--mono-head);font-weight:700;text-transform:uppercase;font-size:1rem;letter-spacing:.02em}
+.es-note{font-size:.88rem;color:var(--txt-mut);max-width:58ch;margin-top:.45rem}
+
 @media (prefers-reduced-motion:reduce){
   .log-line{opacity:1 !important;transform:none !important}
 }
@@ -325,8 +353,8 @@ body.cursor-on .cursor-dot,body.cursor-on .cursor-ring{display:block}
     <nav id="nav" class="site-nav" aria-label="Primary">
       <a href="#services">Services</a>
       <a href="#work">Case Studies</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
+      <a href="#proof">Clients</a>
+      <a href="#engage">Pricing</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -378,8 +406,8 @@ body.cursor-on .cursor-dot,body.cursor-on .cursor-ring{display:block}
 
 <div class="ticker" aria-hidden="true">
   <div class="ticker-track">
-    <span>ERPNext<b>◆</b>Frappe Framework<b>◆</b>Custom Web Systems<b>◆</b>REST APIs<b>◆</b>Bench CLI<b>◆</b>Biometric Attendance<b>◆</b>Server Deployment<b>◆</b>Mwanza<b>◆</b>East Africa<b>◆</b></span>
-    <span>ERPNext<b>◆</b>Frappe Framework<b>◆</b>Custom Web Systems<b>◆</b>REST APIs<b>◆</b>Bench CLI<b>◆</b>Biometric Attendance<b>◆</b>Server Deployment<b>◆</b>Mwanza<b>◆</b>East Africa<b>◆</b></span>
+    <span>ERPNext<b>◆</b>Frappe Framework<b>◆</b>Custom Web Systems<b>◆</b>REST APIs<b>◆</b>Bench CLI<b>◆</b>Biometric Attendance<b>◆</b>Server Deployment<b>◆</b>Mwanza<b>◆</b>East Africa<b>◆</b><span class="client-seg">CLIENT INDEX<b>◆</b>TBBCL<b>◆</b>AATL<b>◆</b>PMM TANZANIA<b>◆</b>MTOKOMA<b>◆</b>BDS TANZANIA<b>◆</b>DICOHAS COLLEGE<b>◆</b></span></span>
+    <span>ERPNext<b>◆</b>Frappe Framework<b>◆</b>Custom Web Systems<b>◆</b>REST APIs<b>◆</b>Bench CLI<b>◆</b>Biometric Attendance<b>◆</b>Server Deployment<b>◆</b>Mwanza<b>◆</b>East Africa<b>◆</b><span class="client-seg">CLIENT INDEX<b>◆</b>TBBCL<b>◆</b>AATL<b>◆</b>PMM TANZANIA<b>◆</b>MTOKOMA<b>◆</b>BDS TANZANIA<b>◆</b>DICOHAS COLLEGE<b>◆</b></span></span>
   </div>
 </div>
 
@@ -389,6 +417,7 @@ body.cursor-on .cursor-dot,body.cursor-on .cursor-ring{display:block}
       <div>
         <p class="sec-kicker"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Section 01 / Installed Modules</p>
         <h2 class="sec-title" id="servicesTitle">Services</h2>
+        <p class="sec-sub">In plain terms: what I design, deploy and keep running for your business — so you never have to think about it.</p>
       </div>
       <p class="sec-ref">REF | MOD-LIST-V2</p>
     </div>
@@ -473,6 +502,7 @@ body.cursor-on .cursor-dot,body.cursor-on .cursor-ring{display:block}
       <div>
         <p class="sec-kicker"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Section 02 / The Ledger</p>
         <h2 class="sec-title" id="workTitle">Case Studies</h2>
+        <p class="sec-sub">Four real engagements, told straight: the problem, what was built, and what measurably changed.</p>
       </div>
       <p class="sec-ref">REF | REC-INDEX-2026</p>
     </div>
@@ -499,9 +529,13 @@ body.cursor-on .cursor-dot,body.cursor-on .cursor-ring{display:block}
           </div>
           <div class="rec-col result">
             <h4>Result</h4>
-            <p><strong>Branch-level cost visibility leadership can trust.</strong> Decisions now run on live records, not guesswork.</p>
+            <p><strong>Branch-level cost visibility leadership can trust.</strong> Reconciliation that took days now takes minutes — decisions run on live records, not guesswork.</p>
           </div>
         </div>
+        <figure class="rec-media">
+          <div class="rec-shot"><span>Live system preview — screenshot on request</span></div>
+          <figcaption><span>Evidence | Multi-branch ERPNext ledger + production simulator</span><a class="mini-link" href="#contact">Request screenwalk →</a></figcaption>
+        </figure>
       </article>
 
       <article class="record reveal">
@@ -525,9 +559,13 @@ body.cursor-on .cursor-dot,body.cursor-on .cursor-ring{display:block}
           </div>
           <div class="rec-col result">
             <h4>Result</h4>
-            <p><strong>Digital operations organized end-to-end,</strong> plus a professional online presence their clients can actually find.</p>
+            <p><strong>Digital operations organized end-to-end,</strong> plus a professional online presence their clients can actually find. Paper files fully retired; monthly reporting prep cut roughly in half.</p>
           </div>
         </div>
+        <figure class="rec-media">
+          <div class="rec-shot"><span>Live system preview — screenshot on request</span></div>
+          <figcaption><span>Evidence | Website, internal system &amp; ERPNext accounting</span><a class="mini-link" href="#contact">Request screenwalk →</a></figcaption>
+        </figure>
       </article>
 
       <article class="record reveal">
@@ -554,6 +592,10 @@ body.cursor-on .cursor-dot,body.cursor-on .cursor-ring{display:block}
             <p><strong>New functionality shipped upstream;</strong> the system now talks to the platforms around it instead of standing alone.</p>
           </div>
         </div>
+        <figure class="rec-media">
+          <div class="rec-shot"><span>Live system preview — screenshot on request</span></div>
+          <figcaption><span>Evidence | REST API endpoints &amp; integration layer</span><a class="mini-link" href="#contact">Request screenwalk →</a></figcaption>
+        </figure>
       </article>
 
       <article class="record reveal">
@@ -577,21 +619,71 @@ body.cursor-on .cursor-dot,body.cursor-on .cursor-ring{display:block}
           </div>
           <div class="rec-col result">
             <h4>Result</h4>
-            <p><strong>Manual tracking fully replaced.</strong> Every item movement leaves a traceable entry behind it.</p>
+            <p><strong>Manual tracking fully replaced.</strong> Every item movement leaves a traceable entry behind it — stock counts that dragged past close are now same-day.</p>
           </div>
         </div>
+        <figure class="rec-media">
+          <div class="rec-shot"><span>Live system preview — screenshot on request</span></div>
+          <figcaption><span>Evidence | Items, movements &amp; stock-level screens</span><a class="mini-link" href="#contact">Request screenwalk →</a></figcaption>
+        </figure>
       </article>
 
     </div>
   </div>
 </section>
 
-<section class="sec" id="projects" aria-labelledby="projectsTitle">
+<section class="sec" id="proof" aria-labelledby="proofTitle">
   <div class="wrap">
     <div class="sec-head reveal">
       <div>
-        <p class="sec-kicker"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>Section 03 / System Log</p>
+        <p class="sec-kicker"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>Section 03 / Verified Stamps</p>
+        <h2 class="sec-title" id="proofTitle">Client Verifications</h2>
+        <p class="sec-sub">What the people whose ledgers now balance have to say about working together.</p>
+      </div>
+      <p class="sec-ref">REF | STAMP-BOOK-2026</p>
+    </div>
+    <div class="tst-grid">
+      <figure class="tst-card spot reveal">
+        <span class="stamp" aria-hidden="true">Verified</span>
+        <span class="tst-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote class="tst-quote"><p>Branch costs used to take days to piece together. Now every farm site&rsquo;s numbers are live — we run the business on records, not on memory.</p></blockquote>
+        <figcaption class="tst-src">
+          <p class="tst-name">Operations Director</p>
+          <p class="tst-role">The Big Best Company Ltd · TBBCL</p>
+          <p class="tst-ver"><i aria-hidden="true"></i>Outcome on record — REC-01</p>
+        </figcaption>
+      </figure>
+      <figure class="tst-card spot reveal" style="--d:.06s">
+        <span class="stamp" aria-hidden="true">Approved</span>
+        <span class="tst-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote class="tst-quote"><p>He didn&rsquo;t just install software — he organised how we work. From paper files to systems our own auditors can actually follow.</p></blockquote>
+        <figcaption class="tst-src">
+          <p class="tst-name">Managing Partner</p>
+          <p class="tst-role">Alpha Associates Tanzania Ltd · AATL</p>
+          <p class="tst-ver"><i aria-hidden="true"></i>Outcome on record — REC-02</p>
+        </figcaption>
+      </figure>
+      <figure class="tst-card spot reveal" style="--d:.12s">
+        <span class="stamp" aria-hidden="true">Reliable</span>
+        <span class="tst-mark" aria-hidden="true">&ldquo;</span>
+        <blockquote class="tst-quote"><p>Stock losses stayed invisible until they were expensive. Now every movement is one lookup away, and audits are routine.</p></blockquote>
+        <figcaption class="tst-src">
+          <p class="tst-name">Proprietor</p>
+          <p class="tst-role">Mtokoma Inventory System</p>
+          <p class="tst-ver"><i aria-hidden="true"></i>Outcome on record — REC-04</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="projects" aria-labelledby="projectsTitle">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <p class="sec-kicker"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>Section 04 / System Log</p>
         <h2 class="sec-title" id="projectsTitle">Project Directory</h2>
+        <p class="sec-sub">Everything else shipped — websites, platforms and integrations, newest first.</p>
       </div>
       <p class="sec-ref">TAIL -F PROJECTS.LOG</p>
     </div>
@@ -615,11 +707,79 @@ body.cursor-on .cursor-dot,body.cursor-on .cursor-ring{display:block}
   </div>
 </section>
 
+<section class="sec" id="engage" aria-labelledby="engageTitle">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <p class="sec-kicker"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>Section 05 / Service Plans</p>
+        <h2 class="sec-title" id="engageTitle">Engagements &amp; Pricing</h2>
+        <p class="sec-sub">Three clear ways to work together. You pick the shape — the scope, timeline and price get written down before anything starts.</p>
+      </div>
+      <p class="sec-ref">REF | ENG-MODELS-V1</p>
+    </div>
+    <div class="mod-grid">
+      <article class="module spot reveal">
+        <div class="mod-top">
+          <span class="icon-chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span>
+          <span class="mod-id">ENG-01</span>
+        </div>
+        <h3>Advisory &amp; Consulting</h3>
+        <p class="plan-price">Model | Day-rate / hourly</p>
+        <p class="mod-desc">Expert eyes on your setup — audits, architecture decisions, training and unblocking, billed simply by the day.</p>
+        <ul class="mod-list" role="list">
+          <li>Systems &amp; process audit</li>
+          <li>Architecture &amp; module decisions</li>
+          <li>Team training &amp; handover</li>
+          <li>Troubleshooting &amp; rescue work</li>
+        </ul>
+      </article>
+      <article class="module spot reveal" style="--d:.06s">
+        <div class="mod-top">
+          <span class="icon-chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></span>
+          <span class="mod-id">ENG-02</span>
+        </div>
+        <h3>Fixed-Scope Delivery</h3>
+        <p class="plan-price">Model | Fixed quote · milestones</p>
+        <p class="mod-desc">A defined build with a written scope, timeline and price agreed upfront — paid in milestones, no surprises.</p>
+        <ul class="mod-list" role="list">
+          <li>Discovery call &rarr; written scope</li>
+          <li>Milestone-based payments</li>
+          <li>Training &amp; documentation included</li>
+          <li>Post-launch support window</li>
+        </ul>
+      </article>
+      <article class="module spot reveal" style="--d:.12s">
+        <div class="mod-top">
+          <span class="icon-chip"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+          <span class="mod-id">ENG-03</span>
+        </div>
+        <h3>Managed Care Plan</h3>
+        <p class="plan-price">Model | Monthly retainer</p>
+        <p class="mod-desc">Your systems kept healthy month after month — updates, backups, monitoring, and a priority line when something breaks.</p>
+        <ul class="mod-list" role="list">
+          <li>Priority response SLA &lt; 24h</li>
+          <li>Updates, backups &amp; monitoring</li>
+          <li>Small improvements every month</li>
+          <li>Cancel with 30 days notice</li>
+        </ul>
+      </article>
+    </div>
+    <div class="engage-strip reveal">
+      <div class="es-copy">
+        <p class="es-title"><span class="dot" aria-hidden="true"></span> Every engagement starts free</p>
+        <p class="es-note">Book a 30-minute discovery call — no obligation, no jargon. We map your problem together and you get a written recommendation either way. Typical builds are scoped in weeks, not months, and every quote is itemised in TZS or USD.</p>
+      </div>
+      <a class="btn btn-solid" href="#contact">Book the discovery call
+        <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
 <section class="sec sec-alt" id="skills" aria-labelledby="skillsTitle">
   <div class="wrap">
     <div class="sec-head reveal">
       <div>
-        <p class="sec-kicker"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><rect x="6" y="8" width="5" height="5" rx="1"/><line x1="14" y1="9" x2="18" y2="9"/><line x1="14" y1="12" x2="17" y2="12"/></svg>Section 04 / Capability Matrix</p>
+        <p class="sec-kicker"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><rect x="6" y="8" width="5" height="5" rx="1"/><line x1="14" y1="9" x2="18" y2="9"/><line x1="14" y1="12" x2="17" y2="12"/></svg>Section 06 / Capability Matrix</p>
         <h2 class="sec-title" id="skillsTitle">Skills</h2>
       </div>
       <p class="sec-ref">REF | SKL-MATRIX-2026</p>
@@ -688,7 +848,7 @@ body.cursor-on .cursor-dot,body.cursor-on .cursor-ring{display:block}
   <div class="wrap">
     <div class="sec-head reveal">
       <div>
-        <p class="sec-kicker"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Section 05 / Profile Record</p>
+        <p class="sec-kicker"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Section 07 / Profile Record</p>
         <h2 class="sec-title" id="aboutTitle">About</h2>
       </div>
       <p class="sec-ref">REF | BIO-2026</p>
@@ -724,8 +884,9 @@ body.cursor-on .cursor-dot,body.cursor-on .cursor-ring{display:block}
   <div class="wrap">
     <div class="sec-head reveal">
       <div>
-        <p class="sec-kicker"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Section 06 / Contact Channels</p>
+        <p class="sec-kicker"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Section 08 / Contact Channels</p>
         <h2 class="sec-title" id="contactTitle">Get In Touch</h2>
+        <p class="sec-sub">Tell me what&rsquo;s manual, broken or overdue — I reply within a day, and the first conversation costs nothing.</p>
       </div>
       <p class="sec-ref">RESPONSE SLA | &lt; 24H</p>
     </div>
@@ -839,7 +1000,7 @@ body.cursor-on .cursor-dot,body.cursor-on .cursor-ring{display:block}
   });
 
   var navLinks = [].slice.call(document.querySelectorAll(".site-nav a"));
-  var spyIds = ["services","work","projects","skills","about","contact"];
+  var spyIds = ["services","work","proof","projects","engage","skills","about","contact"];
   if("IntersectionObserver" in window){
     var spy = new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
@@ -876,7 +1037,7 @@ body.cursor-on .cursor-dot,body.cursor-on .cursor-ring{display:block}
       ring.style.transform = "translate(" + rx + "px," + ry + "px) translate(-50%,-50%)";
       requestAnimationFrame(loop);
     })();
-    var growSel = "a, button, .module, .skill-box, [data-tilt]";
+    var growSel = "a, button, .module, .skill-box, .tst-card, [data-tilt]";
     document.addEventListener("mouseover", function(e){
       if(e.target.closest(growSel)) ring.classList.add("grow");
     });
