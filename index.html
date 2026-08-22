@@ -76,12 +76,18 @@ section{scroll-margin-top:90px}
 .site-nav{display:flex;gap:1.6rem}
 .site-nav a{font-family:var(--mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.14em;text-decoration:none;color:var(--txt-inv-mut);padding:.35rem 0;border-bottom:1px solid transparent}
 .site-nav a:hover,.site-nav a.active{color:var(--txt-inv);border-bottom-color:var(--amber)}
-.nav-btn{display:none;background:none;border:1px solid rgba(241,239,233,.3);color:var(--txt-inv);font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;padding:.45rem .8rem;cursor:pointer}
+.nav-btn{display:none;background:none;border:1px solid rgba(241,239,233,.35);color:var(--txt-inv);width:44px;height:40px;border-radius:4px;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:4px;padding:0;transition:border-color .2s ease,background-color .2s ease}
+.nav-btn:hover{border-color:var(--teal-lite)}
+.nav-btn .bar{display:block;width:18px;height:2px;background:currentColor;border-radius:1px;transition:transform .28s ease,opacity .22s ease}
+.nav-btn.open .bar:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.nav-btn.open .bar:nth-child(2){opacity:0}
+.nav-btn.open .bar:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 @media (max-width:860px){
-  .nav-btn{display:block}
-  .site-nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--ink);border-bottom:1px solid rgba(241,239,233,.14);padding:.5rem clamp(1.25rem,4vw,2rem) 1rem}
-  .site-nav.open{display:flex}
-  .site-nav a{padding:.7rem 0;border-bottom:1px dashed rgba(241,239,233,.12)}
+  .nav-btn{display:flex}
+  .site-nav{position:absolute;top:100%;left:0;right:0;display:flex;flex-direction:column;gap:0;background:var(--ink);border-bottom:1px solid rgba(241,239,233,.14);padding:.4rem clamp(1.25rem,4vw,2rem) 1rem;opacity:0;visibility:hidden;transform:translateY(-12px);pointer-events:none;transition:opacity .3s ease,transform .3s ease,visibility 0s linear .3s}
+  .site-nav.open{opacity:1;visibility:visible;transform:none;pointer-events:auto;transition:opacity .3s ease,transform .3s ease,visibility 0s}
+  .site-nav a{padding:.75rem 0;border-bottom:1px dashed rgba(241,239,233,.12);transition:color .15s ease,border-color .15s ease,padding-left .2s ease}
+  .site-nav.open a:hover{padding-left:.35rem;color:var(--amber)}
 }
 
 .hero{position:relative;overflow:hidden;background:var(--ink);color:var(--txt-inv);padding-block:clamp(5rem,10vw,8rem) clamp(5.5rem,10vw,8.5rem)}
@@ -369,7 +375,7 @@ body.cursor-on .cursor-dot,body.cursor-on .cursor-ring{display:block}
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button id="navBtn" class="nav-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <button id="navBtn" class="nav-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
   </div>
 </header>
 
@@ -937,17 +943,20 @@ body.cursor-on .cursor-dot,body.cursor-on .cursor-ring{display:block}
 
   var navBtn = document.getElementById("navBtn");
   var nav = document.getElementById("nav");
-  navBtn.addEventListener("click", function(){
-    var open = nav.classList.toggle("open");
+  function setMenu(open){
+    nav.classList.toggle("open", open);
+    navBtn.classList.toggle("open", open);
     navBtn.setAttribute("aria-expanded", open ? "true" : "false");
-    navBtn.textContent = open ? "Close" : "Menu";
+    navBtn.setAttribute("aria-label", open ? "Close menu" : "Menu");
+  }
+  navBtn.addEventListener("click", function(){
+    setMenu(!nav.classList.contains("open"));
   });
   nav.addEventListener("click", function(e){
-    if(e.target.tagName === "A"){
-      nav.classList.remove("open");
-      navBtn.setAttribute("aria-expanded","false");
-      navBtn.textContent = "Menu";
-    }
+    if(e.target.tagName === "A"){ setMenu(false); }
+  });
+  document.addEventListener("click", function(e){
+    if(nav.classList.contains("open") && !e.target.closest(".site-head")){ setMenu(false); }
   });
 
   var typedEl = document.getElementById("typed");
