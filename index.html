@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atilio · ERPcodec — ERPNext / Frappe Consultant, Mwanza Tanzania</title>
+<meta name="description" content="Atilio (ERPcodec) — ERPNext/Frappe consultant in Mwanza, Tanzania. ERP implementations, custom web systems, networking, biometric integration and systems integration across East Africa.">
+<meta name="theme-color" content="#12141c">
+<meta property="og:title" content="Atilio · ERPcodec — ERPNext / Frappe Specialist">
+<meta property="og:description" content="Systems that keep businesses running. ERPNext deployments, custom systems, networking and biometric integrations across East Africa.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2312141c'/%3E%3Crect x='7' y='7' width='50' height='50' fill='none' stroke='%23c98a2c' stroke-width='2'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='26' font-weight='700' fill='%23f1efe9' text-anchor='middle'%3EE%2F%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#12141c;
+  --ink-panel:#0d0f16;
+  --ink-line:#262a38;
+  --paper:#f1efe9;
+  --paper-soft:#faf9f4;
+  --paper-dim:#e8e5db;
+  --line:#d6d2c4;
+  --teal:#1f5c6b;
+  --teal-deep:#174b57;
+  --teal-lite:#7cc3d4;
+  --amber:#c98a2c;
+  --amber-deep:#9a6a1e;
+  --green:#3fae6a;
+  --txt:#2a2d36;
+  --txt-mut:#5f6259;
+  --txt-inv:#f1efe9;
+  --txt-inv-mut:rgba(241,239,233,.72);
+  --mono-head:'Space Mono',ui-monospace,monospace;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --sans:'IBM Plex Sans',system-ui,sans-serif;
+  --wrap:1120px;
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--txt);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+::selection{background:var(--amber);color:var(--ink)}
+a{color:inherit}
+h1,h2,h3,h4{text-transform:uppercase;font-family:var(--mono-head);font-weight:700;line-height:1.18;margin:0}
+p{margin:0}
+ul{margin:0;padding:0}
+:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:2px}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-inline:clamp(1.25rem,4vw,2rem)}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--amber);color:var(--ink);font-family:var(--mono);padding:.6rem 1rem;z-index:100;text-transform:uppercase;font-size:.75rem;letter-spacing:.12em;text-decoration:none}
+.skip-link:focus{left:0}
+
+@media (prefers-reduced-motion:no-preference){
+  html{scroll-behavior:smooth}
+}
+section{scroll-margin-top:90px}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .65s ease,transform .65s ease;transition-delay:var(--d,0s)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  *,*::before,*::after{animation:none !important;transition:none !important}
+}
+
+.site-head{position:sticky;top:0;z-index:50;background:rgba(18,20,28,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(241,239,233,.14)}
+.head-row{display:flex;align-items:center;justify-content:space-between;height:62px;position:relative}
+.brand{display:inline-flex;align-items:center;gap:.55rem;font-family:var(--mono-head);font-weight:700;color:var(--txt-inv);text-decoration:none;font-size:.95rem;letter-spacing:.04em;text-transform:uppercase}
+.brand-sep{color:var(--amber)}
+.brand-sub{color:var(--txt-inv-mut)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2.2s infinite}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(63,174,106,.55)}
+  70%{box-shadow:0 0 0 7px rgba(63,174,106,0)}
+  100%{box-shadow:0 0 0 0 rgba(63,174,106,0)}
+}
+.site-nav{display:flex;gap:1.6rem}
+.site-nav a{font-family:var(--mono);font-size:.74rem;text-transform:uppercase;letter-spacing:.14em;text-decoration:none;color:var(--txt-inv-mut);padding:.35rem 0;border-bottom:1px solid transparent}
+.site-nav a:hover{color:var(--txt-inv);border-bottom-color:var(--amber)}
+.nav-btn{display:none;background:none;border:1px solid rgba(241,239,233,.3);color:var(--txt-inv);font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;padding:.45rem .8rem;cursor:pointer}
+@media (max-width:860px){
+  .nav-btn{display:block}
+  .site-nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:var(--ink);border-bottom:1px solid rgba(241,239,233,.14);padding:.5rem clamp(1.25rem,4vw,2rem) 1rem}
+  .site-nav.open{display:flex}
+  .site-nav a{padding:.7rem 0;border-bottom:1px dashed rgba(241,239,233,.12)}
+}
+
+.hero{background:var(--ink);color:var(--txt-inv);padding-block:clamp(4rem,9vw,7rem) clamp(4.5rem,9vw,7.5rem);background-image:
+  linear-gradient(rgba(241,239,233,.045) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(241,239,233,.045) 1px,transparent 1px);
+  background-size:44px 44px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2.5rem,5vw,4.5rem);align-items:center}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.eyebrow{font-family:var(--mono);font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;color:var(--teal-lite)}
+.eyebrow .tick{color:var(--amber);margin-right:.4rem}
+.hero h1{font-size:clamp(2.05rem,5vw,3.5rem);letter-spacing:.01em;margin-top:1.1rem}
+.hero h1 .hl{color:var(--amber)}
+.type-line{margin-top:1.15rem;font-family:var(--mono);font-size:clamp(.85rem,1.6vw,1rem);color:var(--txt-inv-mut);min-height:1.6em;white-space:nowrap;overflow:hidden}
+.type-line .prompt{color:var(--green);margin-right:.45rem}
+.caret{display:inline-block;width:.58em;height:1.05em;background:var(--amber);vertical-align:text-bottom;margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lede{margin-top:1.25rem;max-width:56ch;color:var(--txt-inv-mut);font-size:1.03rem}
+.status-pills{list-style:none;display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.7rem}
+.status-pills li{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;border:1px solid rgba(241,239,233,.28);background:rgba(241,239,233,.06);padding:.42rem .8rem;border-radius:999px;color:rgba(241,239,233,.88)}
+.cta-row{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.1rem}
+.btn{display:inline-block;font-family:var(--mono-head);font-weight:700;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:.85rem 1.5rem;border-radius:3px;border:1px solid transparent;transition:transform .15s ease,background .15s ease,border-color .15s ease,color .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-solid{background:var(--teal);color:#fff}
+.btn-solid:hover{background:var(--teal-deep)}
+.btn-ghost{border-color:rgba(241,239,233,.4);color:var(--txt-inv)}
+.btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+
+.doc-card{background:var(--paper);color:var(--txt);border-radius:6px;padding:1.6rem 1.5rem 1.4rem;box-shadow:0 24px 60px rgba(0,0,0,.45),0 2px 0 rgba(0,0,0,.3)}
+.hc-head{font-family:var(--mono-head);font-weight:700;text-transform:uppercase;font-size:.95rem;letter-spacing:.06em;text-align:center;padding-bottom:.85rem;border-bottom:2px solid var(--ink);position:relative}
+.hc-head::after{content:"";position:absolute;left:0;right:0;bottom:-5px;border-bottom:1px solid var(--ink)}
+.kv-list{margin-top:1.35rem;display:grid;gap:.6rem}
+.kv-row{display:flex;align-items:baseline;gap:.55rem;font-size:.86rem;line-height:1.45}
+.kv-row .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--txt-mut);white-space:nowrap;min-width:6.2em}
+.kv-row .p{color:var(--amber);font-family:var(--mono)}
+.kv-row .v{font-weight:500}
+.kv-row .v a{text-decoration:none;border-bottom:1px solid rgba(31,92,107,.4)}
+.kv-row .v a:hover{color:var(--teal);border-bottom-color:var(--teal)}
+.barcode{height:34px;margin-top:1.3rem;background:
+  repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 5px),
+  repeating-linear-gradient(90deg,var(--ink) 0 1px,transparent 1px 8px),
+  repeating-linear-gradient(90deg,var(--ink) 0 4px,transparent 4px 11px);
+  background-position:0 0}
+.hc-foot{margin-top:.7rem;text-align:center;font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-mut)}
+.hc-foot .p{color:var(--amber)}
+.status-ok{display:inline-flex;align-items:center;gap:.45rem;font-weight:600;color:var(--teal-deep)}
+.status-ok i{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2.2s infinite}
+.doc-rule{border:0;border-top:1px dashed var(--line);margin:1.2rem 0 0}
+
+.sec{padding-block:clamp(4rem,8vw,6.5rem)}
+.sec-alt{background:var(--paper-dim)}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;border-top:2px solid var(--ink);position:relative;padding-top:1.1rem;margin-bottom:clamp(2.2rem,5vw,3.2rem)}
+.sec-head::before{content:"";position:absolute;top:4px;left:0;right:0;border-top:1px solid var(--ink)}
+.sec-kicker{font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--amber-deep);margin-bottom:.5rem}
+.sec-title{font-size:clamp(1.55rem,3.4vw,2.3rem);letter-spacing:.01em}
+.sec-ref{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-mut);white-space:nowrap}
+@media (max-width:640px){.sec-ref{display:none}}
+
+.mod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+@media (max-width:980px){.mod-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:620px){.mod-grid{grid-template-columns:1fr}}
+.module{background:var(--paper-soft);border:1px solid #cfcabb;border-radius:4px;padding:1.5rem 1.4rem;display:flex;flex-direction:column;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.module:hover{transform:translateY(-4px);border-color:var(--teal);box-shadow:0 14px 30px rgba(18,20,28,.09)}
+.mod-id{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;color:var(--paper-soft);background:var(--ink);display:inline-block;align-self:flex-start;padding:.28rem .6rem;border-radius:2px}
+.module h3{font-size:1.02rem;margin-top:.95rem;letter-spacing:.02em}
+.mod-desc{margin-top:.6rem;color:var(--txt-mut);font-size:.93rem}
+.mod-list{list-style:none;margin-top:1rem;display:grid;gap:.42rem}
+.mod-list li{font-family:var(--mono);font-size:.76rem;color:var(--txt);padding-left:1.15rem;position:relative}
+.mod-list li::before{content:"+";color:var(--amber);position:absolute;left:0;font-weight:600}
+
+.records{display:grid}
+.record{padding-block:2.2rem;border-top:1px solid var(--line)}
+.record:first-child{border-top:0;padding-top:0}
+.record:last-child{border-bottom:1px solid var(--line)}
+.rec-head{display:flex;align-items:center;flex-wrap:wrap;gap:.8rem 1rem}
+.rec-id{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;background:var(--teal);color:#fff;padding:.3rem .6rem;border-radius:2px}
+.rec-head h3{font-size:clamp(.98rem,2vw,1.22rem);letter-spacing:.02em}
+.rec-loc{margin-left:auto;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;color:var(--txt-mut);text-transform:uppercase;border:1px solid var(--line);padding:.28rem .6rem;border-radius:999px}
+@media (max-width:640px){.rec-loc{margin-left:0}}
+.rec-meta{margin-top:.9rem;display:flex;flex-wrap:wrap;gap:.35rem 2.2rem}
+.rec-meta .kv-row{font-size:.84rem}
+.rec-cols{margin-top:1.5rem;display:grid;grid-template-columns:repeat(3,1fr)}
+@media (max-width:800px){.rec-cols{grid-template-columns:1fr}}
+.rec-col{padding-inline:1.4rem}
+.rec-col:first-child{padding-left:0}
+.rec-col+.rec-col{border-left:1px dashed var(--line)}
+@media (max-width:800px){
+  .rec-col{padding-inline:0;padding-top:1rem}
+  .rec-col+.rec-col{border-left:0;border-top:1px dashed var(--line);margin-top:1rem}
+}
+.rec-col h4{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;color:var(--teal);display:flex;align-items:center;gap:.5rem}
+.rec-col h4::before{content:"";width:14px;border-top:2px solid var(--amber)}
+.rec-col p{margin-top:.5rem;font-size:.92rem;color:var(--txt)}
+.rec-col.result h4{color:var(--teal-deep)}
+.rec-col.result p strong{color:var(--teal-deep)}
+
+.term{background:var(--ink-panel);border:1px solid var(--ink-line);border-radius:8px;overflow:hidden;box-shadow:0 18px 44px rgba(18,20,28,.16)}
+.term-bar{display:flex;align-items:center;gap:.55rem;padding:.65rem .95rem;background:#151827;border-bottom:1px solid var(--ink-line)}
+.term-bar i{width:10px;height:10px;border-radius:50%;background:#3a3f52;display:inline-block}
+.term-title{margin-left:.5rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#8b91a5}
+.term-body{padding:1.3rem 1.2rem 1.4rem;font-family:var(--mono);font-size:.82rem;color:#c8ccd8;display:grid;gap:.55rem}
+.log-line{display:grid;grid-template-columns:3.6rem auto 1fr;gap:.8rem;align-items:baseline;line-height:1.5}
+@media (max-width:640px){.log-line{grid-template-columns:3.4rem 1fr}.log-txt{grid-column:1/-1}}
+.log-date{color:#6f7690;font-size:.72rem}
+.log-tags{display:inline-flex;gap:.35rem}
+.tag{font-size:.6rem;letter-spacing:.12em;padding:.12rem .42rem;border-radius:2px;border:1px solid}
+.t-web{color:var(--teal-lite);border-color:rgba(124,195,212,.5)}
+.t-sys{color:var(--amber);border-color:rgba(201,138,44,.55)}
+.t-contrib{color:var(--green);border-color:rgba(63,174,106,.55)}
+.t-int{color:#e0b36a;border-color:rgba(224,179,106,.5)}
+.log-txt strong{color:var(--txt-inv);font-weight:600}
+.log-txt span{color:#9aa0b4}
+.cursor{display:inline-block;width:.6em;height:1em;background:var(--green);vertical-align:text-bottom;animation:blink 1.1s steps(1) infinite}
+.term-note{margin-top:1.1rem;font-family:var(--mono);font-size:.72rem;color:var(--txt-mut);text-align:right;letter-spacing:.08em}
+.term-note .p{color:var(--amber)}
+
+.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.1rem}
+@media (max-width:780px){.skill-grid{grid-template-columns:1fr}}
+.skill-box{border:1px solid #cfcabb;border-radius:4px;background:var(--paper-soft);padding:1.4rem 1.4rem 1.5rem;position:relative}
+.skill-box::before{content:"";position:absolute;top:0;left:0;width:34px;border-top:3px solid var(--amber)}
+.sk-code{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;color:var(--amber-deep)}
+.skill-box h3{font-size:.95rem;margin-top:.5rem}
+.chips{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.chips li{font-family:var(--mono);font-size:.72rem;border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:.32rem .72rem;color:var(--txt)}
+
+.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(2.2rem,5vw,4rem);align-items:start}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr}}
+.about-copy p+p{margin-top:1.1rem}
+.about-copy .drop{font-family:var(--mono);font-weight:700;color:var(--teal-deep)}
+.about-card{position:sticky;top:96px}
+@media (max-width:900px){.about-card{position:static}}
+
+.footer{background:var(--ink);color:var(--txt-inv);padding-block:clamp(4rem,8vw,6rem) 2rem;background-image:
+  linear-gradient(rgba(241,239,233,.04) 1px,transparent 1px),
+  linear-gradient(90deg,rgba(241,239,233,.04) 1px,transparent 1px);
+  background-size:44px 44px}
+.footer .sec-head{border-top-color:rgba(241,239,233,.85)}
+.footer .sec-head::before{border-top-color:rgba(241,239,233,.85)}
+.footer .sec-kicker{color:var(--amber)}
+.footer .sec-ref{color:var(--txt-inv-mut)}
+.contact-list{list-style:none;display:grid;gap:.85rem;max-width:640px}
+.contact-list .kv-row{font-size:1rem}
+.contact-list .k{min-width:7.5em;color:var(--txt-inv-mut);font-size:.72rem}
+.contact-list .v a{color:var(--txt-inv);text-decoration:none;border-bottom:1px solid rgba(201,138,44,.6);transition:color .15s ease,border-color .15s ease}
+.contact-list .v a:hover{color:var(--amber);border-bottom-color:var(--amber)}
+.footer-rule{border:0;border-top:1px dashed rgba(241,239,233,.28);margin:clamp(2.4rem,5vw,3.4rem) 0 1.6rem}
+.footer-bottom{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem;font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--txt-inv-mut)}
+.footer-bottom .brand-mini{color:var(--txt-inv)}
+.footer-bottom .p{color:var(--amber)}
+.footer-barcode{height:26px;width:min(220px,100%);background:
+  repeating-linear-gradient(90deg,rgba(241,239,233,.9) 0 2px,transparent 2px 5px),
+  repeating-linear-gradient(90deg,rgba(241,239,233,.9) 0 1px,transparent 1px 8px),
+  repeating-linear-gradient(90deg,rgba(241,239,233,.9) 0 3px,transparent 3px 11px)}
+.end-line{margin-top:1.4rem;text-align:center;font-family:var(--mono);font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:#6f7690}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="#top" aria-label="Atilio — ERPcodec, back to top">
+      <span class="dot" aria-hidden="true"></span>ATILIO<span class="brand-sep">/</span><span class="brand-sub">ERPCODEC</span>
+    </a>
+    <nav id="nav" class="site-nav" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#work">Case Studies</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="navBtn" class="nav-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero" id="top" aria-labelledby="heroTitle">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow reveal"><span class="tick" aria-hidden="true">//</span>ERPNext / Frappe Specialist — Mwanza, Tanzania</p>
+      <h1 id="heroTitle" class="reveal" style="--d:.05s">Systems that keep<br>businesses <span class="hl">running.</span></h1>
+      <p class="type-line reveal" style="--d:.1s" aria-hidden="true"><span class="prompt">&gt;</span><span id="typed"></span><span class="caret"></span></p>
+      <p class="lede reveal" style="--d:.15s">I implement ERPNext and build everything around it — custom web platforms, networks, biometric attendance and integrations — for businesses across East Africa. Fewer spreadsheets. Cleaner ledgers. Operations you can actually audit.</p>
+      <ul class="status-pills reveal" style="--d:.2s" role="list" aria-label="Core capabilities online">
+        <li><span class="dot" aria-hidden="true"></span>ERPNext / Frappe</li>
+        <li><span class="dot" aria-hidden="true"></span>Custom Systems</li>
+        <li><span class="dot" aria-hidden="true"></span>Networking</li>
+        <li><span class="dot" aria-hidden="true"></span>Biometric Integration</li>
+        <li><span class="dot" aria-hidden="true"></span>Systems Integration</li>
+      </ul>
+      <div class="cta-row reveal" style="--d:.25s">
+        <a class="btn btn-solid" href="#work">View case studies</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <aside class="doc-card reveal" style="--d:.2s" aria-label="Consultant record summary">
+      <p class="hc-head">Consultant Record</p>
+      <div class="kv-list">
+        <p class="kv-row"><span class="k">NAME</span><span class="p" aria-hidden="true">|</span><span class="v">ATILIO</span></p>
+        <p class="kv-row"><span class="k">BRAND</span><span class="p" aria-hidden="true">|</span><span class="v">ERPCODEC</span></p>
+        <p class="kv-row"><span class="k">BASE</span><span class="p" aria-hidden="true">|</span><span class="v">MWANZA, TANZANIA</span></p>
+        <p class="kv-row"><span class="k">COVERAGE</span><span class="p" aria-hidden="true">|</span><span class="v">EAST AFRICA</span></p>
+        <p class="kv-row"><span class="k">FOCUS</span><span class="p" aria-hidden="true">|</span><span class="v">ERPNEXT / FRAPPE CONSULTING</span></p>
+        <p class="kv-row"><span class="k">STATUS</span><span class="p" aria-hidden="true">|</span><span class="v status-ok"><i aria-hidden="true"></i>ACCEPTING PROJECTS</span></p>
+      </div>
+      <hr class="doc-rule">
+      <div class="barcode" aria-hidden="true"></div>
+      <p class="hc-foot">DOC NO<span class="p" aria-hidden="true">|</span>ERC-CR-2026-001 · MWANZA, TZ</p>
+    </aside>
+  </div>
+</section>
+
+<section class="sec" id="services" aria-labelledby="servicesTitle">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <p class="sec-kicker">Section 01 / Installed Modules</p>
+        <h2 class="sec-title" id="servicesTitle">Services</h2>
+      </div>
+      <p class="sec-ref">REF | MOD-LIST-V2</p>
+    </div>
+    <div class="mod-grid">
+      <article class="module reveal">
+        <p class="mod-id">MOD-01</p>
+        <h3>ERPNext / Frappe Implementation</h3>
+        <p class="mod-desc">Full-cycle ERPNext rollouts — from chart of accounts design to go-live, training and beyond.</p>
+        <ul class="mod-list" role="list">
+          <li>Chart of accounts &amp; accounting setup</li>
+          <li>Workflows &amp; custom doctypes</li>
+          <li>Custom Frappe apps</li>
+          <li>Server Scripts &amp; client scripts</li>
+        </ul>
+      </article>
+      <article class="module reveal" style="--d:.06s">
+        <p class="mod-id">MOD-02</p>
+        <h3>Custom Web &amp; System Development</h3>
+        <p class="mod-desc">Purpose-built software for when off-the-shelf stops fitting the way you actually work.</p>
+        <ul class="mod-list" role="list">
+          <li>Websites &amp; landing pages</li>
+          <li>Inventory &amp; stock systems</li>
+          <li>Booking &amp; reservation platforms</li>
+          <li>Client &amp; staff portals</li>
+        </ul>
+      </article>
+      <article class="module reveal" style="--d:.12s">
+        <p class="mod-id">MOD-03</p>
+        <h3>Systems Integration</h3>
+        <p class="mod-desc">Making separate systems talk to each other cleanly — no more copy-paste between tools.</p>
+        <ul class="mod-list" role="list">
+          <li>REST API development &amp; consumption</li>
+          <li>Third-party platform integrations</li>
+          <li>Payment &amp; messaging gateways</li>
+          <li>AI / MCP tooling integrations</li>
+        </ul>
+      </article>
+      <article class="module reveal" style="--d:.18s">
+        <p class="mod-id">MOD-04</p>
+        <h3>Networking &amp; Biometric Systems</h3>
+        <p class="mod-desc">Hardware-level attendance and access control, properly configured and synced into your records.</p>
+        <ul class="mod-list" role="list">
+          <li>Biometric device configuration</li>
+          <li>Attendance sync into ERPNext</li>
+          <li>Access control setups</li>
+          <li>LAN &amp; network troubleshooting</li>
+        </ul>
+      </article>
+      <article class="module reveal" style="--d:.24s">
+        <p class="mod-id">MOD-05</p>
+        <h3>IT Infrastructure &amp; Support</h3>
+        <p class="mod-desc">Servers, hosting, backups — and someone to call when something breaks at 8am on a Monday.</p>
+        <ul class="mod-list" role="list">
+          <li>Server deployment &amp; hardening</li>
+          <li>Domain, DNS &amp; hosting management</li>
+          <li>Backups &amp; monitoring</li>
+          <li>Ongoing retainers &amp; support</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="work" aria-labelledby="workTitle">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <p class="sec-kicker">Section 02 / The Ledger</p>
+        <h2 class="sec-title" id="workTitle">Case Studies</h2>
+      </div>
+      <p class="sec-ref">REF | REC-INDEX-2026</p>
+    </div>
+    <div class="records">
+
+      <article class="record reveal">
+        <header class="rec-head">
+          <span class="rec-id">REC-01</span>
+          <h3>TBBCL — The Big Best Company Ltd</h3>
+          <span class="rec-loc">Mwanza · TZ</span>
+        </header>
+        <div class="rec-meta">
+          <p class="kv-row"><span class="k">SECTOR</span><span class="p" aria-hidden="true">|</span><span class="v">Tilapia fish farming, multi-branch</span></p>
+          <p class="kv-row"><span class="k">STACK</span><span class="p" aria-hidden="true">|</span><span class="v">ERPNext · Frappe · Simulation engine</span></p>
+        </div>
+        <div class="rec-cols">
+          <div class="rec-col">
+            <h4>Problem</h4>
+            <p>Costs were tracked manually across branches. Nobody could say what each farm site was really spending or producing without days of reconciliation.</p>
+          </div>
+          <div class="rec-col">
+            <h4>Built</h4>
+            <p>A fish production simulation system paired with a full ERPNext deployment — tailored chart of accounts and multi-branch cost accounting built around aquaculture reality.</p>
+          </div>
+          <div class="rec-col result">
+            <h4>Result</h4>
+            <p><strong>Branch-level cost visibility leadership can trust.</strong> Decisions now run on live records, not guesswork.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="record reveal">
+        <header class="rec-head">
+          <span class="rec-id">REC-02</span>
+          <h3>AATL — Alpha Associates Tanzania Ltd</h3>
+          <span class="rec-loc">Tanzania</span>
+        </header>
+        <div class="rec-meta">
+          <p class="kv-row"><span class="k">SECTOR</span><span class="p" aria-hidden="true">|</span><span class="v">Accounting &amp; tax advisory</span></p>
+          <p class="kv-row"><span class="k">STACK</span><span class="p" aria-hidden="true">|</span><span class="v">Web · Custom system · ERPNext</span></p>
+        </div>
+        <div class="rec-cols">
+          <div class="rec-col">
+            <h4>Problem</h4>
+            <p>No digital foundation at all — operations ran on paper and spreadsheets, with zero online presence in an industry that sells trust.</p>
+          </div>
+          <div class="rec-col">
+            <h4>Built</h4>
+            <p>A company website, a custom internal working system, and an ERPNext accounting deployment complete with a performance evaluation setup.</p>
+          </div>
+          <div class="rec-col result">
+            <h4>Result</h4>
+            <p><strong>Digital operations organized end-to-end,</strong> plus a professional online presence their clients can actually find.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="record reveal">
+        <header class="rec-head">
+          <span class="rec-id">REC-03</span>
+          <h3>PMM Tanzania — ICD System</h3>
+          <span class="rec-loc">Contributor</span>
+        </header>
+        <div class="rec-meta">
+          <p class="kv-row"><span class="k">ROLE</span><span class="p" aria-hidden="true">|</span><span class="v">Contributing developer</span></p>
+          <p class="kv-row"><span class="k">STACK</span><span class="p" aria-hidden="true">|</span><span class="v">REST APIs · Integrations</span></p>
+        </div>
+        <div class="rec-cols">
+          <div class="rec-col">
+            <h4>Problem</h4>
+            <p>The ICD platform needed capability beyond its current feature set — and needed to exchange data with external services.</p>
+          </div>
+          <div class="rec-col">
+            <h4>Built</h4>
+            <p>Extended the system as a contributing developer — REST API endpoints and integration work connecting it to surrounding tools.</p>
+          </div>
+          <div class="rec-col result">
+            <h4>Result</h4>
+            <p><strong>New functionality shipped upstream;</strong> the system now talks to the platforms around it instead of standing alone.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="record reveal">
+        <header class="rec-head">
+          <span class="rec-id">REC-04</span>
+          <h3>Mtokoma Inventory System</h3>
+          <span class="rec-loc">Standalone Build</span>
+        </header>
+        <div class="rec-meta">
+          <p class="kv-row"><span class="k">SECTOR</span><span class="p" aria-hidden="true">|</span><span class="v">Trade &amp; retail inventory</span></p>
+          <p class="kv-row"><span class="k">STACK</span><span class="p" aria-hidden="true">|</span><span class="v">Custom web system</span></p>
+        </div>
+        <div class="rec-cols">
+          <div class="rec-col">
+            <h4>Problem</h4>
+            <p>Stock tracked by hand and paper. Counts drifted, losses stayed invisible until they were expensive, and audits meant flipping notebooks.</p>
+          </div>
+          <div class="rec-col">
+            <h4>Built</h4>
+            <p>A standalone inventory system covering items, movements and stock levels — every transaction written down as a proper record.</p>
+          </div>
+          <div class="rec-col result">
+            <h4>Result</h4>
+            <p><strong>Manual tracking fully replaced.</strong> Every item movement leaves a traceable entry behind it.</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="projects" aria-labelledby="projectsTitle">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <p class="sec-kicker">Section 03 / System Log</p>
+        <h2 class="sec-title" id="projectsTitle">Project Directory</h2>
+      </div>
+      <p class="sec-ref">TAIL -F PROJECTS.LOG</p>
+    </div>
+    <div class="term reveal">
+      <div class="term-bar">
+        <i></i><i></i><i></i>
+        <span class="term-title">projects.log — erpcodec@mwanza</span>
+      </div>
+      <div class="term-body">
+        <p class="log-line"><span class="log-date">2025</span><span class="log-tags"><span class="tag t-web">WEB</span><span class="tag t-sys">SYS</span></span><span class="log-txt"><strong>BDS Tanzania</strong> <span>— corporate website &amp; internal business system</span></span></p>
+        <p class="log-line"><span class="log-date">2025</span><span class="log-tags"><span class="tag t-web">WEB</span></span><span class="log-txt"><strong>DICOHAS College</strong> <span>— institutional website</span></span></p>
+        <p class="log-line"><span class="log-date">2024</span><span class="log-tags"><span class="tag t-web">WEB</span></span><span class="log-txt"><strong>Tourism website</strong> <span>— travel &amp; tours online presence</span></span></p>
+        <p class="log-line"><span class="log-date">2024</span><span class="log-tags"><span class="tag t-contrib">CONTRIB</span></span><span class="log-txt"><strong>JOTUN System</strong> <span>— contributor, platform features</span></span></p>
+        <p class="log-line"><span class="log-date">2023</span><span class="log-tags"><span class="tag t-contrib">CONTRIB</span></span><span class="log-txt"><strong>Gisee Site</strong> <span>— contributor, web platform work</span></span></p>
+        <p class="log-line"><span class="log-date">ONGOING</span><span class="log-tags"><span class="tag t-sys">SYS</span></span><span class="log-txt"><strong>Client Portals</strong> <span>— multiple private client portals delivered</span></span></p>
+        <p class="log-line"><span class="log-date">ONGOING</span><span class="log-tags"><span class="tag t-int">INT</span></span><span class="log-txt"><strong>Systems Integrations</strong> <span>— multiple API &amp; integration engagements</span></span></p>
+        <p class="log-line" aria-hidden="true"><span class="log-date" style="color:var(--green)">$</span><span></span><span><span class="cursor"></span></span></p>
+      </div>
+    </div>
+    <p class="term-note reveal">FULL LEDGER AVAILABLE ON REQUEST <span class="p">|</span> NDA-FRIENDLY</p>
+  </div>
+</section>
+
+<section class="sec sec-alt" id="skills" aria-labelledby="skillsTitle">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <p class="sec-kicker">Section 04 / Capability Matrix</p>
+        <h2 class="sec-title" id="skillsTitle">Skills</h2>
+      </div>
+      <p class="sec-ref">REF | SKL-MATRIX-2026</p>
+    </div>
+    <div class="skill-grid">
+      <div class="skill-box reveal">
+        <p class="sk-code">SKL-01</p>
+        <h3>ERP &amp; Frameworks</h3>
+        <ul class="chips" role="list">
+          <li>ERPNext</li>
+          <li>Frappe Framework</li>
+          <li>Bench CLI</li>
+          <li>Server Scripts</li>
+          <li>Custom App Development</li>
+        </ul>
+      </div>
+      <div class="skill-box reveal" style="--d:.06s">
+        <p class="sk-code">SKL-02</p>
+        <h3>Web &amp; Systems Dev</h3>
+        <ul class="chips" role="list">
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>HTML / CSS</li>
+          <li>Inventory Systems</li>
+          <li>Portals &amp; Dashboards</li>
+        </ul>
+      </div>
+      <div class="skill-box reveal" style="--d:.12s">
+        <p class="sk-code">SKL-03</p>
+        <h3>Infrastructure</h3>
+        <ul class="chips" role="list">
+          <li>Networking</li>
+          <li>Biometric Configuration</li>
+          <li>Server Deployment</li>
+          <li>Hosting &amp; DNS</li>
+          <li>Backup &amp; Monitoring</li>
+        </ul>
+      </div>
+      <div class="skill-box reveal" style="--d:.18s">
+        <p class="sk-code">SKL-04</p>
+        <h3>Integrations</h3>
+        <ul class="chips" role="list">
+          <li>REST APIs</li>
+          <li>Third-Party Integrations</li>
+          <li>AI / MCP Integrations</li>
+          <li>Payment Gateways</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="about" aria-labelledby="aboutTitle">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <p class="sec-kicker">Section 05 / Profile Record</p>
+        <h2 class="sec-title" id="aboutTitle">About</h2>
+      </div>
+      <p class="sec-ref">REF | BIO-2026</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p><span class="drop">&gt;</span> I started out in general IT support — fixing machines, setting up networks, and configuring biometric devices for offices that needed attendance and access control to just work. That hardware-and-networks foundation still shapes how I build today: systems have to run in the real world, on real connections, for real people.</p>
+        <p>From there I moved into full web and systems development — building websites, inventory platforms and portals for clients who had outgrown paper and spreadsheets. Somewhere along the way, nearly every custom system started asking the same questions an accounting system is built to answer, and that pulled me deep into ERPNext.</p>
+        <p>Today I consult on ERPNext and the Frappe framework under my brand, <strong>ERPcodec</strong> — deploying, customising and integrating it for businesses in Mwanza and across East Africa. My favourite projects are the ones where messy manual processes become clean, auditable records: a receipt printed for every entry, a ledger anyone can trust.</p>
+      </div>
+      <aside class="doc-card about-card reveal" style="--d:.1s" aria-label="Career path summary">
+        <p class="hc-head">Entry History</p>
+        <div class="kv-list">
+          <p class="kv-row"><span class="k">STARTED IN</span><span class="p" aria-hidden="true">|</span><span class="v">General IT Support</span></p>
+          <p class="kv-row"><span class="k">FOUNDATION</span><span class="p" aria-hidden="true">|</span><span class="v">Networking &amp; Biometric Systems</span></p>
+          <p class="kv-row"><span class="k">EVOLVED TO</span><span class="p" aria-hidden="true">|</span><span class="v">Web &amp; Systems Development</span></p>
+          <p class="kv-row"><span class="k">SPECIALIZED</span><span class="p" aria-hidden="true">|</span><span class="v">ERPNext Consulting</span></p>
+          <p class="kv-row"><span class="k">OPERATES AS</span><span class="p" aria-hidden="true">|</span><span class="v">ERPcodec</span></p>
+          <p class="kv-row"><span class="k">BASED IN</span><span class="p" aria-hidden="true">|</span><span class="v">Mwanza, Tanzania</span></p>
+          <p class="kv-row"><span class="k">WORKS ACROSS</span><span class="p" aria-hidden="true">|</span><span class="v">East Africa</span></p>
+        </div>
+        <hr class="doc-rule">
+        <div class="barcode" aria-hidden="true"></div>
+        <p class="hc-foot">ENTRY STATUS<span class="p" aria-hidden="true">|</span>CURRENT &amp; ACTIVE</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer" id="contact" aria-labelledby="contactTitle">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div>
+        <p class="sec-kicker">Section 06 / Contact Channels</p>
+        <h2 class="sec-title" id="contactTitle">Get In Touch</h2>
+      </div>
+      <p class="sec-ref">RESPONSE SLA | &lt; 24H</p>
+    </div>
+    <ul class="contact-list reveal" role="list">
+      <li class="kv-row"><span class="k">EMAIL</span><span class="p" aria-hidden="true">|</span><span class="v"><a href="mailto:hello@erpcodec.com">hello@erpcodec.com</a></span></li>
+      <li class="kv-row"><span class="k">WHATSAPP</span><span class="p" aria-hidden="true">|</span><span class="v"><a href="https://wa.me/255000000000">+255 XXX XXX XXX</a></span></li>
+      <li class="kv-row"><span class="k">LINKEDIN</span><span class="p" aria-hidden="true">|</span><span class="v"><a href="https://www.linkedin.com/in/erpcodec" rel="noopener">linkedin.com/in/erpcodec</a></span></li>
+      <li class="kv-row"><span class="k">GITHUB</span><span class="p" aria-hidden="true">|</span><span class="v"><a href="https://github.com/atilioobadia-cpu" rel="noopener">github.com/atilioobadia-cpu</a></span></li>
+      <li class="kv-row"><span class="k">INSTAGRAM</span><span class="p" aria-hidden="true">|</span><span class="v"><a href="https://www.instagram.com/erpcodec" rel="noopener">@erpcodec</a></span></li>
+    </ul>
+    <hr class="footer-rule">
+    <div class="footer-bottom">
+      <p>© <span id="year">2026</span> ATILIO <span class="p" aria-hidden="true">|</span> <span class="brand-mini">ERPCODEC</span> — MWANZA, TANZANIA</p>
+      <div class="footer-barcode" aria-hidden="true"></div>
+    </div>
+    <p class="end-line">* * * END OF DOCUMENT * * *</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  var navBtn = document.getElementById("navBtn");
+  var nav = document.getElementById("nav");
+  navBtn.addEventListener("click", function(){
+    var open = nav.classList.toggle("open");
+    navBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    navBtn.textContent = open ? "Close" : "Menu";
+  });
+  nav.addEventListener("click", function(e){
+    if(e.target.tagName === "A"){
+      nav.classList.remove("open");
+      navBtn.setAttribute("aria-expanded","false");
+      navBtn.textContent = "Menu";
+    }
+  });
+
+  var typedEl = document.getElementById("typed");
+  var words = [
+    "deploying ERPNext.",
+    "building custom web systems.",
+    "configuring biometric attendance.",
+    "wiring networks that stay up.",
+    "integrating APIs & AI tooling."
+  ];
+  if(reduced){
+    typedEl.textContent = words[0];
+  } else {
+    var wi = 0, ci = 0, deleting = false;
+    function tick(){
+      var w = words[wi];
+      if(!deleting){
+        ci++;
+        typedEl.textContent = w.slice(0, ci);
+        if(ci === w.length){ deleting = true; return setTimeout(tick, 1800); }
+        return setTimeout(tick, 48 + Math.random() * 46);
+      }
+      ci--;
+      typedEl.textContent = w.slice(0, ci);
+      if(ci === 0){ deleting = false; wi = (wi + 1) % words.length; return setTimeout(tick, 380); }
+      setTimeout(tick, 22);
+    }
+    setTimeout(tick, 600);
+  }
+
+  var targets = document.querySelectorAll(".reveal");
+  if(reduced || !("IntersectionObserver" in window)){
+    targets.forEach(function(el){ el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    targets.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
