@@ -142,9 +142,8 @@ section{scroll-margin-top:90px}
 .fp-cap{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--txt-mut)}
 .fp-cap .p{color:var(--amber)}
 .doc-rule{border:0;height:2px;border-radius:1px;background:var(--tz-line);margin:1.2rem 0 0}
-.pass-shot{margin:0 0 1.1rem;padding:.4rem;background:#fff;border:1px solid var(--card-line)}
-.pass-shot img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 22%}
-.pass-strip{height:3px;background:var(--tz-line);margin-top:.4rem}
+.id-photo{width:78px;height:78px;object-fit:cover;object-position:center 22%;border-radius:8px;border:2px solid #fff;box-shadow:0 0 0 1px var(--card-line)}
+.id-photo-wrap{display:flex;justify-content:center;margin:.25rem 0 1.05rem}
 
 .sec{padding-block:clamp(4rem,8vw,6.5rem)}
 .sec-alt{background:var(--paper-dim)}
@@ -449,6 +448,7 @@ body.cursor-on .cursor-dot,body.cursor-on .cursor-ring{display:block}
     </div>
     <aside class="doc-card spot tilt reveal" style="--d:.2s" data-tilt aria-label="Consultant record summary">
       <p class="hc-head"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Consultant Record</p>
+      <div class="id-photo-wrap"><img class="id-photo" src="assets/profile-pass.jpeg" alt="Passport photo of Atilio Obadia" width="1024" height="1024"></div>
       <div class="kv-list">
         <p class="kv-row"><span class="k">NAME</span><span class="p" aria-hidden="true">|</span><span class="v">ATILIO OBADIA</span></p>
         <p class="kv-row"><span class="k">BRAND</span><span class="p" aria-hidden="true">|</span><span class="v">ERPCODEC</span></p>
@@ -940,10 +940,6 @@ body.cursor-on .cursor-dot,body.cursor-on .cursor-ring{display:block}
       </div>
       <aside class="doc-card about-card reveal" style="--d:.1s" aria-label="Career path summary">
         <p class="hc-head"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Entry History</p>
-        <figure class="pass-shot">
-          <img src="assets/profile-pass.jpeg" alt="Passport photo of Atilio Obadia" width="1024" height="1024">
-          <div class="pass-strip" aria-hidden="true"></div>
-        </figure>
         <div class="kv-list">
           <p class="kv-row"><span class="k">STARTED IN</span><span class="p" aria-hidden="true">|</span><span class="v">General IT Support</span></p>
           <p class="kv-row"><span class="k">FOUNDATION</span><span class="p" aria-hidden="true">|</span><span class="v">Networking &amp; Biometric Systems</span></p>
