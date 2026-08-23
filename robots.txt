@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://atilioobadia-cpu.github.io/profile_personel/sitemap.xml
